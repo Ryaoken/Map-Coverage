@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <style>
         html, body, #map {
@@ -37,11 +38,13 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/Map_Coverage_1.js"></script>
+        <script src="js/leaflet-search.js"></script>
+        <script src="data/Map_Coverage_2.js"></script>
+        <script src="data/VenueName_3.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[50.34093808866907,-2.857466724260783],[51.33646913905159,0.008611214648032639]]);
+        }).fitBounds([[51.6732030556044,-1.2022497205524465],[52.298508877826805,0.643662424173393]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -126,19 +129,26 @@
         });
         layer_GoogleRoadMap_0;
         map.addLayer(layer_GoogleRoadMap_0);
-        function pop_Map_Coverage_1(feature, layer) {
+        map.createPane('pane_GoogleSatelliteView_1');
+        map.getPane('pane_GoogleSatelliteView_1').style.zIndex = 401;
+        var layer_GoogleSatelliteView_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatelliteView_1',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_GoogleSatelliteView_1;
+        map.addLayer(layer_GoogleSatelliteView_1);
+        function pop_Map_Coverage_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Promotion Date'] !== null ? autolinker.link(String(feature.properties['Promotion Date']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Team'] !== null ? autolinker.link(String(feature.properties['Team']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Event Date'] !== null ? autolinker.link(String(feature.properties['Event Date']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Venue'] !== null ? autolinker.link(String(feature.properties['Venue']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -148,31 +158,163 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Map_Coverage_1_0() {
+        function style_Map_Coverage_2_0() {
             return {
-                pane: 'pane_Map_Coverage_1',
+                pane: 'pane_Map_Coverage_2',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(0,223,255,0.4627450980392157)',
+                fillColor: 'rgba(0,227,255,0.5215686274509804)',
                 interactive: true,
             }
         }
-        map.createPane('pane_Map_Coverage_1');
-        map.getPane('pane_Map_Coverage_1').style.zIndex = 401;
-        map.getPane('pane_Map_Coverage_1').style['mix-blend-mode'] = 'normal';
-        var layer_Map_Coverage_1 = new L.geoJson(json_Map_Coverage_1, {
+        map.createPane('pane_Map_Coverage_2');
+        map.getPane('pane_Map_Coverage_2').style.zIndex = 402;
+        map.getPane('pane_Map_Coverage_2').style['mix-blend-mode'] = 'normal';
+        var layer_Map_Coverage_2 = new L.geoJson(json_Map_Coverage_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Map_Coverage_1',
-            layerName: 'layer_Map_Coverage_1',
-            pane: 'pane_Map_Coverage_1',
-            onEachFeature: pop_Map_Coverage_1,
-            style: style_Map_Coverage_1_0,
+            dataVar: 'json_Map_Coverage_2',
+            layerName: 'layer_Map_Coverage_2',
+            pane: 'pane_Map_Coverage_2',
+            onEachFeature: pop_Map_Coverage_2,
+            style: style_Map_Coverage_2_0,
         });
-        bounds_group.addLayer(layer_Map_Coverage_1);
-        map.addLayer(layer_Map_Coverage_1);
+        bounds_group.addLayer(layer_Map_Coverage_2);
+        map.addLayer(layer_Map_Coverage_2);
+        function pop_VenueName_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Venue Name'] !== null ? autolinker.link(String(feature.properties['Venue Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_VenueName_3_0() {
+            return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,234,255,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_VenueName_3');
+        map.getPane('pane_VenueName_3').style.zIndex = 403;
+        map.getPane('pane_VenueName_3').style['mix-blend-mode'] = 'normal';
+        var layer_VenueName_3 = new L.geoJson(json_VenueName_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_VenueName_3',
+            layerName: 'layer_VenueName_3',
+            pane: 'pane_VenueName_3',
+            onEachFeature: pop_VenueName_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_VenueName_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_VenueName_3);
+        map.addLayer(layer_VenueName_3);
+        map.on("zoomend", function(){
+
+                if (map.hasLayer(layer_Map_Coverage_2)) {
+                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                        layer_Map_Coverage_2.eachLayer(function (layer) {
+                            layer.openTooltip();
+                        });
+                    } else {
+                        layer_Map_Coverage_2.eachLayer(function (layer) {
+                            layer.closeTooltip();
+                        });
+                    }
+                }
+                if (map.hasLayer(layer_VenueName_3)) {
+                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                        layer_VenueName_3.eachLayer(function (layer) {
+                            layer.openTooltip();
+                        });
+                    } else {
+                        layer_VenueName_3.eachLayer(function (layer) {
+                            layer.closeTooltip();
+                        });
+                    }
+                }
+        });
         setBounds();
+        var i = 0;
+        layer_VenueName_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Venue Name'] !== null?String('<div style="color: #323232; font-size: 12pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Venue Name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_VenueName_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+                if (map.hasLayer(layer_Map_Coverage_2)) {
+                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                        layer_Map_Coverage_2.eachLayer(function (layer) {
+                            layer.openTooltip();
+                        });
+                    } else {
+                        layer_Map_Coverage_2.eachLayer(function (layer) {
+                            layer.closeTooltip();
+                        });
+                    }
+                }
+                if (map.hasLayer(layer_VenueName_3)) {
+                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                        layer_VenueName_3.eachLayer(function (layer) {
+                            layer.openTooltip();
+                        });
+                    } else {
+                        layer_VenueName_3.eachLayer(function (layer) {
+                            layer.closeTooltip();
+                        });
+                    }
+                }
+        map.addControl(new L.Control.Search({
+            layer: layer_VenueName_3,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'Venue Name'}));
+        if (typeof url === 'undefined') {
+            document.getElementsByClassName('search-button')[0].className += ' fa fa-binoculars';
+        } else {
+            document.getElementsByClassName('search-button')[1].className += ' fa fa-binoculars';
+        }
+        resetLabels([layer_Map_Coverage_2,layer_VenueName_3]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Map_Coverage_2,layer_VenueName_3]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Map_Coverage_2,layer_VenueName_3]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Map_Coverage_2,layer_VenueName_3]);
+        });
         </script>        
     </body>
 </html>
