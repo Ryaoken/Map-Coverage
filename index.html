@@ -44,7 +44,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[52.42177090607092,-2.1905155949495208],[52.47978408190309,-2.0174613313814733]]);
+        }).fitBounds([[51.256588333748496,-2.839618746983476],[51.30951202460443,-2.685792734923151]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -143,16 +143,287 @@
         layer_GoogleSatelliteView_1;
         map.addLayer(layer_GoogleSatelliteView_1);
         function pop_Map_Coverage_2(feature, layer) {
+            var popupContent = '<table>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Map_Coverage_2_0() {
-            return {
+        function style_Map_Coverage_2_0(feature) {
+            switch(String(feature.properties['Venue'])) {
+                default:
+                    return {
                 pane: 'pane_Map_Coverage_2',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(0,227,255,0.5215686274509804)',
-                interactive: true,
+                fillColor: 'rgba(48,18,59,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Abbeydale Sports and Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(59,47,127,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Ash Victoria Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(66,74,180,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Ashford Manor Golf Club':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(70,101,220,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Ashtead Peace Memorial Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(70,126,245,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Banstead Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(65,151,255,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Branksome Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(49,175,245,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Caversham Park Village Association':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(32,199,223,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Chawn Hill Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(24,219,198,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Mancetter Memorial Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(32,234,173,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Parkside Community Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(58,244,144,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Pedmore Cricket Club':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(94,252,110,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'St Katherine\'s Parish Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(133,255,81,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'St Michael & All Angels Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(164,252,60,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Woodmancote Village Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(190,244,52,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Christ the King Church Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(214,230,53,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Mead Vale Community Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(234,212,57,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Pewsham Commnunity Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,192,58,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Putnoe Heights Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(254,169,51,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'St Christopher\'s Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(253,141,39,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Dorridge Village Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,111,26,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Oak Farm Library':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(236,83,15,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Totton and Eling Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(222,62,8,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Weston Favell Parish Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(203,43,4,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Wokingham Masonic Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(179,27,1,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Wylde Green URC Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(152,14,1,0.6)',
+                interactive: false,
+            }
+                    break;
+                case 'Our Lady Queen of Apostles Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(122,4,3,0.6)',
+                interactive: false,
+            }
+                    break;
             }
         }
         map.createPane('pane_Map_Coverage_2');
@@ -160,7 +431,7 @@
         map.getPane('pane_Map_Coverage_2').style['mix-blend-mode'] = 'normal';
         var layer_Map_Coverage_2 = new L.geoJson(json_Map_Coverage_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Map_Coverage_2',
             layerName: 'layer_Map_Coverage_2',
             pane: 'pane_Map_Coverage_2',
@@ -253,6 +524,19 @@
                 }
         });
         setBounds();
+        var i = 0;
+        layer_Map_Coverage_2.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Venue'] !== null?String('<div style="color: #323232; font-size: 12pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Venue']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Map_Coverage_2'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
         var i = 0;
         layer_VenueName_3.eachLayer(function(layer) {
             var context = {
