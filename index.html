@@ -14,11 +14,9 @@
         <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
+        #map {
+            width: 1620px;
+            height: 892px;
         }
         </style>
         <title></title>
@@ -49,7 +47,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[50.27002739092452,-3.4497443585214147],[52.38444339814468,2.703296123887668]]);
+        }).fitBounds([[51.36197136063116,-2.8376370962574384],[51.782685032020446,-1.6070289997320124]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -187,7 +185,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(56,40,111,0.5)',
+                fillColor: 'rgba(54,32,92,0.5)',
                 interactive: false,
             }
                     break;
@@ -197,7 +195,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(63,61,154,0.5)',
+                fillColor: 'rgba(58,45,122,0.5)',
                 interactive: false,
             }
                     break;
@@ -207,7 +205,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(68,81,191,0.5)',
+                fillColor: 'rgba(63,58,149,0.5)',
                 interactive: false,
             }
                     break;
@@ -217,7 +215,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(70,101,219,0.5)',
+                fillColor: 'rgba(65,71,173,0.5)',
                 interactive: false,
             }
                     break;
@@ -227,7 +225,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(71,119,239,0.5)',
+                fillColor: 'rgba(68,84,194,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Astral Park Sports and Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(69,95,212,0.5)',
                 interactive: false,
             }
                     break;
@@ -237,7 +245,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(69,138,252,0.5)',
+                fillColor: 'rgba(70,107,227,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Beansheaf Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(71,119,239,0.5)',
                 interactive: false,
             }
                     break;
@@ -247,7 +265,37 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(62,156,254,0.5)',
+                fillColor: 'rgba(70,130,248,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Burton Latimer Community Association':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(68,142,254,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Cadley Sports & Social Club':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(63,154,255,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Calmore Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(56,165,251,0.5)',
                 interactive: false,
             }
                     break;
@@ -257,7 +305,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(50,174,246,0.5)',
+                fillColor: 'rgba(48,176,245,0.5)',
                 interactive: false,
             }
                     break;
@@ -267,7 +315,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(37,192,231,0.5)',
+                fillColor: 'rgba(40,188,235,0.5)',
                 interactive: false,
             }
                     break;
@@ -277,7 +325,27 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
+                fillColor: 'rgba(33,198,224,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Christ Church Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
                 fillColor: 'rgba(27,208,213,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Christ Church Fulham':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(24,216,201,0.5)',
                 interactive: false,
             }
                     break;
@@ -287,7 +355,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(24,221,193,0.5)',
+                fillColor: 'rgba(24,225,188,0.5)',
                 interactive: false,
             }
                     break;
@@ -297,7 +365,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,233,176,0.5)',
+                fillColor: 'rgba(29,231,178,0.5)',
                 interactive: false,
             }
                     break;
@@ -307,7 +375,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(47,241,155,0.5)',
+                fillColor: 'rgba(38,237,166,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Hill View Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(50,242,152,0.5)',
                 interactive: false,
             }
                     break;
@@ -317,7 +395,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(72,248,130,0.5)',
+                fillColor: 'rgba(65,247,136,0.5)',
                 interactive: false,
             }
                     break;
@@ -327,7 +405,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(100,253,106,0.5)',
+                fillColor: 'rgba(82,250,121,0.5)',
                 interactive: false,
             }
                     break;
@@ -337,7 +415,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(128,255,83,0.5)',
+                fillColor: 'rgba(100,253,106,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Narborough Parish Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(118,254,91,0.5)',
                 interactive: false,
             }
                     break;
@@ -347,7 +435,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(154,254,65,0.5)',
+                fillColor: 'rgba(135,255,78,0.5)',
                 interactive: false,
             }
                     break;
@@ -357,7 +445,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(174,250,55,0.5)',
+                fillColor: 'rgba(151,254,67,0.5)',
                 interactive: false,
             }
                     break;
@@ -367,7 +455,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(193,243,52,0.5)',
+                fillColor: 'rgba(164,252,60,0.5)',
                 interactive: false,
             }
                     break;
@@ -377,7 +465,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(211,232,53,0.5)',
+                fillColor: 'rgba(176,249,54,0.5)',
                 interactive: false,
             }
                     break;
@@ -387,7 +475,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(226,220,56,0.5)',
+                fillColor: 'rgba(188,245,52,0.5)',
                 interactive: false,
             }
                     break;
@@ -397,7 +485,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(239,205,58,0.5)',
+                fillColor: 'rgba(199,239,52,0.5)',
                 interactive: false,
             }
                     break;
@@ -407,7 +495,47 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(248,190,57,0.5)',
+                fillColor: 'rgba(211,232,53,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St Dionis Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(221,224,55,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St Erconwalds Catholic Church Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(230,216,56,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St Etheldredas Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(238,207,58,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St John Vianney Catholic Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(245,198,58,0.5)',
                 interactive: false,
             }
                     break;
@@ -417,7 +545,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(253,173,52,0.5)',
+                fillColor: 'rgba(249,188,57,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St Margaret of Antioch Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,178,54,0.5)',
                 interactive: false,
             }
                     break;
@@ -427,7 +565,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(254,153,44,0.5)',
+                fillColor: 'rgba(254,166,50,0.5)',
                 interactive: false,
             }
                     break;
@@ -437,7 +575,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(252,131,35,0.5)',
+                fillColor: 'rgba(254,153,44,0.5)',
                 interactive: false,
             }
                     break;
@@ -447,7 +585,57 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(247,110,26,0.5)',
+                fillColor: 'rgba(253,140,39,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St Peters Parish Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,126,33,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'St Thomas Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,112,27,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Stockwood Free Church':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(243,99,21,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Stoke Gifford Trust Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(238,86,16,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'The Barnabas Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(232,74,12,0.5)',
                 interactive: false,
             }
                     break;
@@ -457,7 +645,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(239,89,17,0.5)',
+                fillColor: 'rgba(225,65,9,0.5)',
                 interactive: false,
             }
                     break;
@@ -467,7 +655,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(229,71,11,0.5)',
+                fillColor: 'rgba(217,56,7,0.5)',
                 interactive: false,
             }
                     break;
@@ -477,7 +665,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(217,56,7,0.5)',
+                fillColor: 'rgba(208,47,5,0.5)',
                 interactive: false,
             }
                     break;
@@ -487,7 +675,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(203,42,4,0.5)',
+                fillColor: 'rgba(198,39,3,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Townhill Farm Community Centre':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(188,32,2,0.5)',
                 interactive: false,
             }
                     break;
@@ -497,7 +695,17 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(185,30,2,0.5)',
+                fillColor: 'rgba(176,25,1,0.5)',
+                interactive: false,
+            }
+                    break;
+                case 'Whetstone Memorial Hall':
+                    return {
+                pane: 'pane_Map_Coverage_2',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(163,19,1,0.5)',
                 interactive: false,
             }
                     break;
@@ -507,7 +715,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(166,20,1,0.5)',
+                fillColor: 'rgba(149,13,1,0.5)',
                 interactive: false,
             }
                     break;
@@ -517,7 +725,7 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(143,10,1,0.5)',
+                fillColor: 'rgba(135,8,2,0.5)',
                 interactive: false,
             }
                     break;
@@ -588,14 +796,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(48,18,59,0.7)',
+                fillColor: 'rgba(48,18,59,0.8)',
                 interactive: true,
             }
                     break;
@@ -604,14 +812,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(56,39,108,0.7)',
+                fillColor: 'rgba(53,31,91,0.8)',
                 interactive: true,
             }
                     break;
@@ -620,14 +828,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(63,59,150,0.7)',
+                fillColor: 'rgba(58,44,120,0.8)',
                 interactive: true,
             }
                     break;
@@ -636,14 +844,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(67,77,185,0.7)',
+                fillColor: 'rgba(62,57,146,0.8)',
                 interactive: true,
             }
                     break;
@@ -652,14 +860,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(70,96,213,0.7)',
+                fillColor: 'rgba(65,69,170,0.8)',
                 interactive: true,
             }
                     break;
@@ -668,14 +876,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(71,114,234,0.7)',
+                fillColor: 'rgba(68,81,191,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Astral Park Sports and Community Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(69,93,209,0.8)',
                 interactive: true,
             }
                     break;
@@ -684,14 +908,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(70,132,249,0.7)',
+                fillColor: 'rgba(70,105,224,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Beansheaf Community Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(71,116,236,0.8)',
                 interactive: true,
             }
                     break;
@@ -700,14 +940,46 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(66,149,255,0.7)',
+                fillColor: 'rgba(70,127,245,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Burton Latimer Community Association':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(69,138,252,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Calmore Community Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(65,149,255,0.8)',
                 interactive: true,
             }
                     break;
@@ -716,14 +988,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(56,166,251,0.7)',
+                fillColor: 'rgba(59,160,253,0.8)',
                 interactive: true,
             }
                     break;
@@ -732,14 +1004,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(43,184,239,0.7)',
+                fillColor: 'rgba(52,172,248,0.8)',
                 interactive: true,
             }
                     break;
@@ -748,14 +1020,46 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(32,199,223,0.7)',
+                fillColor: 'rgba(44,182,240,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Christ Church Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(37,193,230,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Christ Church Fulham':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(30,202,219,0.8)',
                 interactive: true,
             }
                     break;
@@ -764,14 +1068,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(25,213,205,0.7)',
+                fillColor: 'rgba(26,212,208,0.8)',
                 interactive: true,
             }
                     break;
@@ -780,14 +1084,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(25,226,187,0.7)',
+                fillColor: 'rgba(24,220,196,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Cradley Sports & Social Club':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(25,227,185,0.8)',
                 interactive: true,
             }
                     break;
@@ -796,14 +1116,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(34,235,170,0.7)',
+                fillColor: 'rgba(31,233,174,0.8)',
                 interactive: true,
             }
                     break;
@@ -812,14 +1132,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(53,243,149,0.7)',
+                fillColor: 'rgba(41,239,162,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Hill View Community Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(53,243,148,0.8)',
                 interactive: true,
             }
                     break;
@@ -828,14 +1164,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(77,249,126,0.7)',
+                fillColor: 'rgba(69,248,133,0.8)',
                 interactive: true,
             }
                     break;
@@ -844,14 +1180,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(104,253,103,0.7)',
+                fillColor: 'rgba(85,250,118,0.8)',
                 interactive: true,
             }
                     break;
@@ -860,14 +1196,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(130,255,82,0.7)',
+                fillColor: 'rgba(102,253,104,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Narborough Parish Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(120,254,90,0.8)',
                 interactive: true,
             }
                     break;
@@ -876,14 +1228,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(155,254,65,0.7)',
+                fillColor: 'rgba(137,255,77,0.8)',
                 interactive: true,
             }
                     break;
@@ -892,14 +1244,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(173,251,56,0.7)',
+                fillColor: 'rgba(152,254,67,0.8)',
                 interactive: true,
             }
                     break;
@@ -908,14 +1260,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(191,244,52,0.7)',
+                fillColor: 'rgba(164,252,60,0.8)',
                 interactive: true,
             }
                     break;
@@ -924,14 +1276,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(209,234,52,0.7)',
+                fillColor: 'rgba(176,250,55,0.8)',
                 interactive: true,
             }
                     break;
@@ -940,14 +1292,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(223,223,55,0.7)',
+                fillColor: 'rgba(187,245,52,0.8)',
                 interactive: true,
             }
                     break;
@@ -956,14 +1308,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(236,209,58,0.7)',
+                fillColor: 'rgba(198,240,52,0.8)',
                 interactive: true,
             }
                     break;
@@ -972,14 +1324,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(246,195,58,0.7)',
+                fillColor: 'rgba(209,233,53,0.8)',
                 interactive: true,
             }
                     break;
@@ -988,14 +1340,78 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(252,179,54,0.7)',
+                fillColor: 'rgba(219,226,54,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Dionis Church':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(228,218,56,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Erconwalds Catholic Church Hall':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(236,209,58,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Etheldredas Church':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(243,200,58,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St John Vianney Catholic Church':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(248,191,57,0.8)',
                 interactive: true,
             }
                     break;
@@ -1004,14 +1420,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(254,161,48,0.7)',
+                fillColor: 'rgba(251,182,55,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Margaret of ANtioch Church':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(254,170,51,0.8)',
                 interactive: true,
             }
                     break;
@@ -1020,14 +1452,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(253,142,39,0.7)',
+                fillColor: 'rgba(254,158,47,0.8)',
                 interactive: true,
             }
                     break;
@@ -1036,14 +1468,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(249,121,30,0.7)',
+                fillColor: 'rgba(254,146,42,0.8)',
                 interactive: true,
             }
                     break;
@@ -1052,14 +1484,94 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(243,100,22,0.7)',
+                fillColor: 'rgba(252,133,35,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Peters Parish Hall':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(249,119,30,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'St Thomas Church':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(245,106,24,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Stockwood Free Church':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(241,93,19,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Stoke Gifford Trust Hall':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(236,82,15,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'The Barnabas Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(229,71,11,0.8)',
                 interactive: true,
             }
                     break;
@@ -1068,14 +1580,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(235,81,14,0.7)',
+                fillColor: 'rgba(222,62,8,0.8)',
                 interactive: true,
             }
                     break;
@@ -1084,14 +1596,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(226,66,10,0.7)',
+                fillColor: 'rgba(215,54,6,0.8)',
                 interactive: true,
             }
                     break;
@@ -1100,14 +1612,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(213,52,6,0.7)',
+                fillColor: 'rgba(206,45,4,0.8)',
                 interactive: true,
             }
                     break;
@@ -1116,14 +1628,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(199,39,3,0.7)',
+                fillColor: 'rgba(196,37,3,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Townhill Farm Community Centre':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(185,30,2,0.8)',
                 interactive: true,
             }
                     break;
@@ -1132,14 +1660,30 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(182,29,2,0.7)',
+                fillColor: 'rgba(174,24,1,0.8)',
+                interactive: true,
+            }
+                    break;
+                case 'Whetstone Memorial Hall':
+                    return {
+                pane: 'pane_VenueName_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.8)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(162,18,1,0.8)',
                 interactive: true,
             }
                     break;
@@ -1148,14 +1692,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(164,19,1,0.7)',
+                fillColor: 'rgba(148,13,1,0.8)',
                 interactive: true,
             }
                     break;
@@ -1164,14 +1708,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(142,10,1,0.7)',
+                fillColor: 'rgba(134,7,2,0.8)',
                 interactive: true,
             }
                     break;
@@ -1180,14 +1724,14 @@
                 pane: 'pane_VenueName_3',
                 radius: 8.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,0.7)',
+                color: 'rgba(35,35,35,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(122,4,3,0.7)',
+                fillColor: 'rgba(122,4,3,0.8)',
                 interactive: true,
             }
                     break;
@@ -1307,6 +1851,6 @@
         map.on("layerremove", function(){
             resetLabels([layer_Map_Coverage_2,layer_VenueName_3]);
         });
-        </script>        
+        </script>
     </body>
 </html>
